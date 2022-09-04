@@ -132,8 +132,8 @@ function buildCharts(sample) {
     let metaData = data.metadata;
     let filteredMetaData = metaData.filter(sampleObj => sampleObj.id == sample)[0];
     let wfreq = filteredMetaData.wfreq;
-     // 4. Create the trace for the gauge chart.
-     var gaugeData = [{
+    // 4. Create the trace for the gauge chart.
+    let gaugeData = [{
       domain: {x: [0,1], y: [0,1]},
       value: wfreq,
       type: "indicator",
@@ -153,7 +153,7 @@ function buildCharts(sample) {
     }];
     
     // 5. Create the layout for the gauge chart.
-    var gaugeLayout = { 
+    let gaugeLayout = { 
       width: 500,
       height: 500, 
       margin: {
